@@ -1,0 +1,246 @@
+@charset "UTF-8";
+/*初期設定*/
+* {
+  margin: 0;
+  padding: 0;
+  font-feature-settings: "palt";}
+.flex{
+  display: flex;
+}
+.test{
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+  margin: 0 auto;
+  display: block;
+}
+
+img {
+  height: 100%;
+  width: 100%; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+#load {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 11; }
+  #load .loadRoll {
+    width: 60px;
+    height: 60px;
+    animation: rooling 3s linear infinite;
+    position: absolute;
+    top: 45vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto; }
+@keyframes rooling {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+.loading {
+  animation: loading 1.5s forwards; }
+
+@keyframes loading {
+  0% {
+    display: block;
+    opacity: 1; }
+  85% {
+    display: block;
+    opacity: 1; }
+  99% {
+    display: block;
+    opacity: 0;
+    z-index: 11; }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1; } }
+/*page*/
+.pagebody {
+  font-family: "小塚ゴシック Pro L", "Kozuka Gothic Pro Light", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ;
+  position: relative; }
+
+/*nav*/
+nav {
+  display: inline-block;
+  height: 101vh;
+  width: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #b8d200;
+  z-index: 10; }
+  nav .navContainer>ul>li:hover img{
+    transform: rotate(360deg);
+    transition: 0.5s;
+  }
+  nav .navContainer>ul>li {
+    position: relative;
+    text-align: center;
+    padding-top: 20px;
+    background-color: #b8d200;
+    cursor: pointer; }
+    nav li img {
+      width: 40%; }
+  nav #campaignIcon img {
+    width: 60%; }
+  nav #shoppingIcon {
+    opacity: 0.5; }
+  nav #company_nav .nav_hover {
+    width: 410px;
+    left: -370px; }
+  nav #recruit_nav .nav_hover {
+    transition: all .2s linear;
+    width: 840px;
+    left: -800px; }
+  nav .nav_hover {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #b8d200;
+    padding: 0 15px;
+    border-radius: 35px;
+    z-index: -1; }
+    nav #company_nav:hover .nav_hover{
+      transition: all .2s linear;
+      top: 10px;
+      left: 40px;
+    }
+    nav #recruit_nav:hover .nav_hover{
+      transition: all .2s linear;
+      top: 10px;
+      left: 40px;
+    }
+    nav .nav_hover li {
+      margin-right: 20px;
+      line-height: 70px;
+    font-weight: bold;}
+    nav .nav_hover li a {
+        color: #fff; }
+    nav .nav_hover li a:hover {
+        opacity: .5; }
+  nav .spin_nav {
+    animation: spin .3s linear; }
+
+main {
+  width: 1090px;
+  padding-left: 100px;
+  margin: 0 auto;
+  display: block;
+  overflow: hidden;}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+@keyframes reverse_spin {
+  from {
+    transform: rotate(360deg); }
+  to {
+    transform: rotate(0deg); } }
+
+/*header*/
+header {
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  margin-left: 100px;
+  margin-bottom: 13px; }
+  header .sns-icon {
+    margin: auto 0 0 auto; }
+    header .sns-icon li {
+      display: inline-block; }
+    header .sns-icon #blog {
+      width: 50px; }
+    header .sns-icon #blog:hover {
+      transform: scale(1.2); }
+    header .sns-icon #mypage {
+      width: 25px; }
+    header .sns-icon #mypage:hover {
+      transform: scale(1.2); }
+    header .sns-icon #twitter {
+      width: 37px; }
+    header .sns-icon #twitter:hover {
+      transform: scale(1.2); }
+    header .sns-icon #fb {
+      width: 37px; }
+    header .sns-icon #fb:hover {
+      transform: scale(1.2); }
+    header .sns-icon #inst {
+      width: 37px; }
+    header .sns-icon #inst:hover {
+      transform: scale(1.2); }
+  header .headerIcon {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: -45px;
+    width: 90px;
+    height: 90px;
+    animation: spin 5s linear forwards infinite; }
+  header .headerText {
+    margin: 20px 0 20px 50px;
+    width: 350px;
+    cursor: pointer; }
+
+.pagetitle {
+  background-color: #b8d200;
+  background-repeat: no-repeat;
+  background-size: 90px;
+  background-position: 60px;
+  border: 1px solid #b8d200;
+  border-radius: 25px;
+  margin-left: -20px;
+  margin-top: 30px;
+  width: 180px;
+  height: 30px; }
+
+.topback {
+  display: block;
+  margin-top: 70px;
+  height: 40px;
+  background-color: #dfeb8c;
+  background-image: url(../images/btn_top.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold; }
+
+.topback:hover {
+  background-color: #b8d200; }
+
+footer {
+  width: 100%;
+  height: 70px;
+  background-color: #c9dd40; }
+  footer .footer_com_img {
+    background-image: url(../images/img_footer_logo.svg);
+    background-repeat: no-repeat;
+    background-size: 230px;
+    background-position: 0 10px;
+    width: 250px;
+    margin: 0 auto;
+    height: 60px; }
+
+footer:hover {
+  background-color: #fff; }
+  footer:hover .footer_com_img {
+    background-image: url(../images/h1.png);
+  }
+
+/*# sourceMappingURL=common.css.map */

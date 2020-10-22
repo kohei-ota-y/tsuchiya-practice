@@ -1,0 +1,396 @@
+@charset "UTF-8";
+.contact.pagebody{
+  margin-left: 100px;}
+.contact .pagetitle {
+  background-image: url(../../assets/images/tit_contact.svg); }
+.contact .container {
+  margin-bottom: 300px; }
+.contact .react-tabs__tab-list {
+  margin: 30px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 18px;
+  width: 700px; }
+.contact .react-tabs__tab-list li {
+  border: 1px solid #b8d200;
+  border-radius: 25px;
+  color: #b8d200;
+  text-align: center;
+  padding: 4px 35px 0;
+  position: relative;
+  cursor: pointer; }
+.contact .react-tabs__tab-list .react-tabs__tab--selected {
+  background-color: #b8d200;
+  color: #fff; }
+.contact .react-tabs__tab-list .react-tabs__tab--selected::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 45%;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 11px solid #b8d200; }
+.contact .formBox {
+  width: 700px;
+  margin: 0 auto; }
+.contact .formBox .errorText {
+  color: red;
+  display: none;
+  text-align: center;
+  margin:10px 0 30px}
+.contact .formBox .errorText.active {
+  display: block; }
+.contact .formBox input[type=radio] {
+  display: none; }
+.contact .formBox select {
+  width: 100%;
+  height: 40px;
+  font-size: 15px;
+  border: 1px solid red;
+  position: relative;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  padding: 8px 0 8px 10px; }
+.contact .formBox select.selected {
+  border: 1px solid #b8d200;}
+.contact .formBox select.selected+.arrow-bg{
+  background-color: #b8d200;}
+.contact .formBox .data_selecterBox {
+  width: 430px; }
+.contact .formBox .data_selecterBox p {
+  width: 1em;
+  margin: 8px; }
+.contact .formBox .data_selecterBox .data_selecter {
+  width: 100px;
+  height: 40px;
+  margin-bottom: 20px;
+  display: flex;}
+.contact .formBox .data_selecterBox .data_selecter:checked {
+  border: 1px solid #000;}
+.contact .formBox .data_selecterBox .data_selecter::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fff;
+  z-index: -1; }
+.contact .formBox .data_selecterBox select {
+  padding: 10px 0 10px 10px; }
+.contact .formBox .arrow-bg {
+  position: relative;
+  background-color: #fc053e;
+  width: 40px;
+  height: 40px;
+  margin-left: -40px;
+  z-index: -2; }
+.contact .formBox .arrow-bg::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fff; }
+.contact .formBox .arrow-bg-green {
+  background-color: #b8d200;
+  width: 39px;
+  height: 39px;
+  margin-left: -39px;
+  z-index: -2; }
+.contact .formBox .radio {
+  position: relative;
+  margin-left: 20px; }
+.contact .formBox .radio::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #b8d200;
+  border-radius: 50px;
+  position: absolute;
+  top: 2px;
+  left: -20px; }
+.contact .formBox .radio::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 6px;
+  left: -16px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #b8d200;
+  background-color: #b8d200;
+  border-radius: 50%; }
+.contact .formBox input[type=radio]:checked + .radio::after {
+  display: block; }
+.contact .formBox .content-inquiry {
+  width: 400px;
+  height: 250px;
+  border: 1px solid #b8d200;
+  padding: 10px 0 0 10px;
+  font-size: 15px; }
+.contact .formBox .go-next {
+  width: 130px;
+  border: 1px solid #b8d200;
+  border-radius: 25px;
+  background-color: #b8d200;
+  margin: 100px auto 0; }
+.contact .formBox .go-next p {
+  text-align: center;
+  padding: 3px 0; }
+.contact .formBox .go-next input {
+  display: none; }
+.contact .basicInfo li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+.contact .basicInfo li p {
+  font-weight: bold;
+  width: 260px;
+  padding-top: 10px; }
+.contact .basicInfo li p span {
+  color: red; }
+.contact .basicInfo input {
+  outline: none;
+  padding: 12px 0 12px 15px;
+  font-size: 15px;
+  margin-bottom: 40px; }
+.contact .basicInfo input {
+  border: 1px solid #fc053e;
+  background-color: #FEE5EB;}
+.contact .basicInfo .defaultInput input {
+background-color: transparent;
+border: 1px solid #b8d200;}
+.contact .basicInfo input.val-ok {
+background-color: transparent;
+border: 1px solid #b8d200;}
+  .contact .basicInfo input[type=text]:placeholder-shown {
+  border: 1px solid #fc053e;
+  background-color: #FEE5EB; }
+
+.contact .basicInfo .name .basic_inputBox input {
+  font-size: 15px;
+  width: 140px;
+  margin-right: 20px; }
+.contact .basicInfo .adress .basic_inputBox input {
+  width: 320px; }
+.contact .contact_midbar {
+  border-top: 1px solid #b8d200;
+  color: #b8d200;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-weight: bold; }
+.contact .reservaion_about li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px; }
+.contact .reservaion_about li ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+.contact .reservaion_about li p {
+  font-weight: bold;
+  width: 260px; }
+.contact .reservaion_about li p span {
+  color: red; }
+.contact .reservaion_about .store_text {
+  width: 1em;
+  margin: 8px; }
+.contact .reservaion_about .store_selecter {
+  width: 150px;
+  margin-bottom: 20px; }
+.contact .reservaion_about .reason_input {
+  width: 430px;
+  margin-left: -20px; }
+.contact .reservaion_about .reason_input .reason_check {
+  display: none; }
+.contact .reservaion_about .reason_input label {
+  position: relative;
+  margin-left: 40px; }
+.contact .reservaion_about .reason_input .checkBox_off::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 15px;
+  left: -20px;
+  margin-top: -10px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #fc053e;
+  background-color: #fee5eb; }
+.contact .reservaion_about .reason_input .checked::before {
+  border: 1px solid #b8d200;
+  background-color: transparent; }
+.contact .reservaion_about .reason_input label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -17px;
+  top: 3px;
+  width: 5px;
+  height: 9px;
+  border-right: 2px solid #b8d200;
+  border-bottom: 2px solid #b8d200;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  opacity: 0;}
+.contact .reservaion_about .reason_input input[type=checkbox]:checked + label::after {
+  opacity: 1; }
+.contact .reservaion_about .reason_input textarea {
+  margin-left: 30px;
+  border: 1px solid #b8d200;
+  width: 290px;
+  height: 170px;
+  padding: 10px;
+  pointer-events: none;
+outline: none;}
+.contact .reservaion_about .reason_input textarea.active {
+  pointer-events: auto;}
+.contact .reservaion_about .reason_input textarea.no-Value {
+  border: 1px solid #fc053e;}
+.contact .reservaion_about .times select {
+  width: 100%;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  padding: 10px 0 10px 10px; }
+.contact .reservaion_about .times .times_selecter {
+  width: 140px;
+  height: 38px;
+  border: 1px solid #b8d200;
+  position: relative;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+.contact .reservaion_about .times .times_selecter::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fff;
+  z-index: -1; }
+.contact .reservaion_about .buy input {
+  display: none; }
+.contact .reservaion_about .charge .charge_input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+.contact .reservaion_about .charge .charge_input input {
+  display: none; }
+.contact .reservaion_about .charge .charge_input .chargerName {
+  margin: 0 10px;
+  width: 150px;
+  display: block;
+  border: 1px solid #b8d200;
+  background-color: #e0e0e0; }
+.contact .recruit_about li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px; }
+.contact .recruit_about li ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+.contact .recruit_about li p {
+  font-weight: bold;
+  width: 260px; }
+.contact .recruit_about li p span {
+  color: red; }
+.contact .recruit_about li .recruit_about_textinput {
+  width: 400px;
+  padding: 12px 0 12px 15px;
+  border: 1px solid #fc053e;
+  background-color: #FEE5EB;
+  font-size: 15px;
+  outline: none; }
+.contact .recruit_about li .recruit_about_textinput.val-ok:not(:placeholder-shown) {
+  border: 1px solid #b8d200;
+  background-color: transparent;}
+.contact .recruit_about .sex input {
+  display: none; }
+.contact .recruit_about .sex .radio-required {
+  position: relative;
+  margin-left: 20px; }
+.contact .recruit_about .sex .radio-required::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fc053e;
+  border-radius: 50px;
+  position: absolute;
+  top: 2px;
+  left: -20px; }
+.contact .recruit_about .sex .radio-required::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 6px;
+  left: -16px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #b8d200;
+  background-color: #b8d200;
+  border-radius: 50%; }
+.contact .recruit_about .sex input[type=radio]:checked + .radio-required::after {
+  display: block; }
+.contact .recruit_about .sex .radio-checked::before {
+  border-color: #b8d200; }
+.contact .recruit_about .occupation_selecter {
+  width: 250px;
+  height: 38px;
+  position: relative;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+.contact .recruit_about .occupation_selecter select {
+  border: 1px solid #b8d200;}
+.contact .recruit_about .occupation_selecter::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fff; }
+.contact .site_about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+.contact .site_about p {
+  font-weight: bold;
+  width: 260px;
+  padding-top: 10px; }
