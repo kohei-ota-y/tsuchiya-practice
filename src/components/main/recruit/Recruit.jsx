@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Slider from 'react-slick'
 import Pop from '../RecruitPop'
-import TopSlide from './TopSlide'
-import PeopleBar from './PeopleBar'
-import RecruitHover from './RecruitHover'
+import { TopSlide, PeopleBar, RecruitHover } from './index'
 import { Header, Footer, Nav } from '../../common/index'
 import leftArrow from '../../../assets/images/left_arrow_r.svg'
 import rightArrow from '../../../assets/images/right_arrow_r.svg'
@@ -21,7 +19,18 @@ function SampleNextArrow(props) {
 const Recruit = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
-	}, [])
+	})
+	const peopleSettings = {
+		infinite: true,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 0,
+		speed: 5000,
+		slidesToShow: 10,
+		cssEase: "linear",
+		variableWidth: true,
+		slidesToScroll: 1,
+	}
 	const [prevStyle, setPrevStyle] = useState(true);
 	const [nextStyle, setNextStyle] = useState(false);
 	const settings = {
@@ -42,15 +51,7 @@ const Recruit = () => {
 			}
 		}
 	}
-	const peopleSettings = {
-		arrows: false,
-		autoplay: true,
-		autoplaySpeed: 0,
-		speed: 5000,
-		slidesToShow: 10,
-		cssEase: "linear",
-        variableWidth: true
-	}
+
 	return (
 		<>
 			<Header />
@@ -59,7 +60,7 @@ const Recruit = () => {
 				<main className="main" id="top">
 					<Pop type="b" />
 					<div className="top">
-						<Slider {...settings} _>
+						<Slider {...settings} >
 							<TopSlide slideNum="slide1" />
 							<TopSlide slideNum="slide2" />
 							<TopSlide slideNum="slide3" />

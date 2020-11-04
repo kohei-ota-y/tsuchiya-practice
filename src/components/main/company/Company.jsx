@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Idea, Service, Greeting, Pop, About, PageBar } from './index'
 import { Header, Footer, Nav } from '../../common/index'
-import { useLocation } from 'react-router';
 
 const Company = () => {
 	const [pop, popChange] = useState(true),
