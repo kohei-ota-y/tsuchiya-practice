@@ -39,12 +39,11 @@ const ServiceDetail = (props) => {
         img:Image6
     }
   }
-  console.log(props.service)
   return(
     <li className="service_box_text">
       <p className="text_title">{data[props.service].tit}</p>
       <p>{data[props.service].text}</p>
-      <div className="text_image"><img src={data[props.service].img} /></div>
+      <div className="text_image"><img src={data[props.service].img} alt="" /></div>
     </li>
   )
 }

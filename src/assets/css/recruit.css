@@ -206,7 +206,9 @@ white-space: pre-wrap;}
 .recruit .people {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex; 
+  height: 275px;
+  overflow: hidden;}
 .recruit .people .people_item {
   position: relative;
   padding-top: 90px; }

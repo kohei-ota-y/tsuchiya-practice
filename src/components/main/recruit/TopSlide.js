@@ -22,7 +22,7 @@ const TopSlide = (props) => {
     <div className={props.slideNum}>
       <div className={props.slideNum + "_box"}>
         <p className={props.slideNum + "_title"}>
-          <img src={topSlideData[props.slideNum].image} />
+          <img src={topSlideData[props.slideNum].image} alt=""/>
         </p>
         <p className={props.slideNum + "_text"}>
           {topSlideData[props.slideNum].text}

@@ -1,9 +1,7 @@
 import React,{useEffect} from 'react'
-import ContentList from './ContentsList'
+import ContentsList from './ContentsList'
 import Shops from './Shops'
 import { Header, Footer, Nav } from '../../common/index'
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 
 
 const Main = (props) => {
@@ -15,10 +13,10 @@ const Main = (props) => {
       <Header />
       <Nav />
       <main className="top">
-        <ContentList />
+        <ContentsList />
         <Shops />
       </main>
-      <Footer />
+      <Footer type="top"/>
     </>
   )
 }

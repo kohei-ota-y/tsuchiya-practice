@@ -1,4 +1,4 @@
-import React, { useState,useCallback } from 'react';
+import React, { useState } from 'react';
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
 import ShopDetail from './ShopDetail';
 import ShopList from './ShopList';
@@ -21,9 +21,11 @@ const Shops= (props) =>{
     target[0].classList.add('is_active');
   }
 
+  const [tabIndex, setTabIndex] = useState(0);
+
     return(
       <div className="wrapper">
-			  <Tabs id="tab" className="flex" >
+			  <Tabs id="tab" className="flex"  selectedIndex = { tabIndex }  onSelect = { index  =>  {setTabIndex (index)}}  >
           <TabList className="tab_list" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             <Tab className="is_active"><ShopList images={Image1} alt={'SHIN-KOIWA'} shopName={'shinkoiwa'} /></Tab>
             <Tab><ShopList images={Image2} alt={'ICHIKAWA'} shopName={'ichikawa'} /></Tab>
@@ -32,12 +34,12 @@ const Shops= (props) =>{
             <Tab><ShopList images={Image5} alt={'TOGANE'} shopName={'togane'} /></Tab>
             <Tab><ShopList images={Image6} alt={'MOBARA'} shopName={'mobara'} /></Tab>
           </TabList>
-          <TabPanel className="tab_box"><ShopDetail shop="shinkoiwa"/></TabPanel>
-          <TabPanel className="tab_box"><ShopDetail shop="ichikawa"/></TabPanel>
-          <TabPanel className="tab_box"><ShopDetail shop="chibakita"/></TabPanel>
-          <TabPanel className="tab_box"><ShopDetail shop="narita"/></TabPanel>
-          <TabPanel className="tab_box"><ShopDetail shop="togane"/></TabPanel>
-          <TabPanel className="tab_box"><ShopDetail shop="mobara"/></TabPanel>
+          <TabPanel className="tab_box"><ShopDetail tabIndex={tabIndex} shop="shinkoiwa"/></TabPanel>
+          <TabPanel className="tab_box"><ShopDetail tabIndex={tabIndex} shop="ichikawa"/></TabPanel>
+          <TabPanel className="tab_box"><ShopDetail tabIndex={tabIndex} shop="chibakita"/></TabPanel>
+          <TabPanel className="tab_box"><ShopDetail tabIndex={tabIndex} shop="narita"/></TabPanel>
+          <TabPanel className="tab_box"><ShopDetail tabIndex={tabIndex} shop="togane"/></TabPanel>
+          <TabPanel className="tab_box"><ShopDetail tabIndex={tabIndex} shop="mobara"/></TabPanel>
         </Tabs>
       </div>
     );

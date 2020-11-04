@@ -5,7 +5,7 @@ const Greeting = () => {
     <div id="greet" className="greet">
       <div className="greet-bg"></div>
       <div className="greet_box">
-        <div className="greet_image"><img src={GreetinImage} /></div>
+        <div className="greet_image"><img src={GreetinImage} alt="代表取締役　土屋正己" /></div>
         <div className="greet_box_text">
           <p>ツチヤ自動車株式会社は昭和44年4月、東京・葛飾に誕生いたしました。当時はまだわが国の自動車社会は黎明期にあり、車種もそれほど多くはありませんでした。<br/>しかし、その後に訪れる高度経済成長とともに自動車社会は急成長をとげ、わが国の基幹産業といえるまでに成長。世界に冠たる自動車社会の雄としての今日の姿を形成するに至りました。</p>
 

@@ -1,11 +1,9 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 const ShopList = (props) => {
-const [classes, setClasess] = useState(props.shopName);
-
   return(
   <>
-    <div className={"tab_content " + classes} onClick={props.tabClick}>
+    <div className={"tab_content " + props.shopName} onClick={props.tabClick}>
       <div className="bg-black">
         <img src={props.images} alt={props.alt} />
       </div>

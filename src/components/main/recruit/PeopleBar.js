@@ -41,7 +41,7 @@ const PeopleBar = (props) => {
   return(
     <div className="people_item">
       <div className="people_img">
-        <img src={PeopleBarData[props.num].image} />
+        <img src={PeopleBarData[props.num].image} alt="people" />
       </div>
       <p className="people_coments">
         {PeopleBarData[props.num].text}
